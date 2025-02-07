@@ -2,67 +2,98 @@
 <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Post Configuration Setup</h1>
-</p>
-This tutorial demonstrates the post configuration setup of the osTicket system .<br />
+<h1>osTicket - Post-Install Configuration</h1>
+This tutorial outlines the post-install configuration of the open-source help desk ticketing system osTicket.<br />
+
+<h2>Environments and Technologies Used</h2>
+
+- Microsoft Azure (Virtual Machines/Compute)
+- Remote Desktop
+- Internet Information Services (IIS)
+
+<h2>Operating Systems Used </h2>
+
+- Windows 10</b> (21H2)
+
+<h2>Post-Install Configuration Objectives</h2>
+
+- Configure Roles
+- Configure Departments
+- Configure Teams
+- Allow anyone to create tickets
+- Configure Agents
+- Configure Users
+- Configure SLA
+- Configure Help Topics
+
+<h2>Configuration Steps</h2>
 
 <p>
+Configure Roles by selecting Admin Panel -> Agents -> Roles. Create a role named "Supreme Admin" that has all available permissions.
+</p>
+<p>
+<img height="80%" width="80%" alt="Supreme Admin" src="https://i.imgur.com/ju94z9h.png">
+</p>
+<br />
 
-</p>
+<p>
+Configure Departments by selecting Admin Panel -> Agents -> Departments and create a department called "System Administrators".
 </p>
 <p>
-Okay wonderful! We have successfully configured osTicket from scratch. Now we will do some system administration and work on some post installation setup.
-first we will configure new roles within the help desk. In order to do so go to Admin panel-> Agents-> Roles. We will create a Supreme Admin. 
-Click on "Add new role" then enter the name of the new role. You can also modify any specific roles permissions. In this case since we are creating a Supreme Admin they will be given all permissions. Keep in mind roles are used to determine an agents permissions so not all agents will have unlimited access. If you followed the steps correctly your screen should like something like this. As you can see we have successfully created the "Supreme Admin" role.
-</p>
-<img src="https://i.imgur.com/XHteqdt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img height="80%" width="80%" alt="System Administrators" src="https://i.imgur.com/8q3zKLq.png">
 </p>
 <br />
-<p>
-</p>
-<p>
-Select the "Departments" button in the agents tab. Here we will be able to create a new department. Each Agent is assigned to a specific department depending on their assigned role within the helpdesk. In this case we will be creating the "System Administrators" department, this is where the Supreme Admins will be designated. Other specific settings such as SLAs, managers and other email settings can be set up in the departments tab. 
-</p>
-<br />
-<p>
-<img src="https://i.imgur.com/dGK0RVM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-After configuring a new department we will set up a new team. Teams allow you to pull agents from different departments you can have an A team that has top technicians from specific departments. For example you can create a help topic that correlates with a product you produce, and assign it to a team of agents that specialize in that particular product. To set up a team go to Agents->Teams. A Level I support team has been created by default, in this example we will create a Level II Support Team. 
-</p>
-<br />
-<p>
-<img src="https://i.imgur.com/cYzWBD2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Now that we have set up a new team we will create a new setting that will allow anyone to create tickets. Admin Panel->Settings->User Settings.
 
-</p>
-<br />
-<img src="https://i.imgur.com/H1q2Fdh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p>
+Configure Teams by selecting Admin Panel -> Agents -> Teams and add Level II Support.
 </p>
 <p>
-It is now time to create Agents. Agents are the employees of the helpdesk that actually work on solving tickets. Agents are assigned primary departments and given a primary role for tickets sent to their department. Agents can be given access to other departments other than their own, they can also have different roles depending on which department they are in. Permissions, Access, & Teams are be assigned in the Agents tab. 
+<img height="80%" width="80%" alt="Level II Support" src="https://i.imgur.com/QdZOmTN.png">
 </p>
 <br />
-<img src="https://i.imgur.com/8WTOSre.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p>
+Allow anyone to create tickets by selecting Admin Panel -> Settings -> User Settings and ensure that "Require registration and login to create tickets" is not selected.
 </p>
 <p>
-After creating some agents we will create users. Users are customers that create tickets when they are having issues. A user is identified with their E-mail address. To create a user follow this path Agent Panel->Users->User Directory->Add new. 
+<img height="80%" width="80%" alt="Does not require registration" src="https://i.imgur.com/sDN1i5S.png">
 </p>
 <br />
-<img src="https://i.imgur.com/xOprA9f.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p>
+Configure Agents by selecting Admin Panel -> Agents -> Add New and add two new agents named Jane and John.
 </p>
 <p>
-SLAs Plans provide a length of time in which the help desk is expected to take in order to solve a specific ticket. SLA Plans are created by going to Admin Panel->Manage->SLA Plans. Each SLA has a schedule and within that schedule there is a grace period. In this example SEV-A has a 24/7 and a one hour grace period. 
+<img height="80%" width="80%" alt="Agents Jane and John" src="https://i.imgur.com/xJn10Yd.png">
 </p>
 <br />
-<img src="https://i.imgur.com/LpjCaLd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p>
+Configure Users by selecting Agent Panel -> Users -> Add New and add two users, Karen and Ken.
 </p>
 <p>
-Help topics help users categorize their tickets. In the example below we have made a help topic for "Business Critical Outage" this can be if customers cannot access mobile banking. 
+<img height="80%" width="80%" alt="Users Karen and Ken" src="https://i.imgur.com/I4aYs5z.png">
 </p>
 <br />
-<img src="https://i.imgur.com/kB7rts2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<p>
+Configure SLA by selecting Admin Panel -> Manage -> SLA and add: Sev-A (1 hour, 24/7), Sev-B (4 hours, 24/7), Sev-C (8 hours, business hours).
 </p>
 <p>
+<img height="80%" width="80%" alt="Sev-A SLA" src="https://i.imgur.com/lUpqGoh.png">
+</p>
+<p>
+<img height="80%" width="80%" alt="Sev-B SLA" src="https://i.imgur.com/sksVmj4.png">
+</p>
+<p>
+<img height="80%" width="80%" alt="Sev-C SLA" src="https://i.imgur.com/eb97jPK.png">
+</p>
+<br />
+
+<p>
+Configure Help Topics by selecting Admin Panel -> Manage -> Help Topics and add the following: Business Critical Outage, Personal Computer Issues, Equipment Request, Password Reset.
+</p>
+<p>
+<img height="80%" width="80%" alt="Help Topics" src="https://i.imgur.com/v78Knqq.png">
+</p>
+<br />
